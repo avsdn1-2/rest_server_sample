@@ -1,3 +1,4 @@
-#index:
-#    path: /
-#    controller: App\Controller\MovieController::list
+get_yml_city:
+  path: /weather/city/{cityName}
+  controller: WeatherController::getWeatherByCity
+  methods: [POST, GET]
