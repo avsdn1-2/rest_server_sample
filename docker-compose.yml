@@ -1,0 +1,12 @@
+mariadb:
+  image: mariadb:10.2
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: weather
+    MYSQL_USER: username
+    MYSQL_PASSWORD: password
+  restart: on-failure
+  ports:
+    - 3306:3306
+  volumes:
+    - ./data/mariadb:/var/lib/mysql
